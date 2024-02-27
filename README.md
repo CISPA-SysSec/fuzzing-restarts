@@ -1,6 +1,6 @@
 # Fuzzing Restarts
 
-This repository is part of our paper *[Novelty Not Found: Adaptive Fuzzer Restarts to Improve Input Space Coverage](https://mschloegel.me/paper/schiller2023fuzzerrestarts.pdf)*. Here you can find the codebase for our scheduler `Sileo`, as well as the submodules for Fuzzbench and a patched version of AFL++. We tested Sileo with AFL++ 4.04c and 4.06c.
+This repository is part of our paper *[Novelty Not Found: Adaptive Fuzzer Restarts to Improve Input Space Coverage](https://mschloegel.me/paper/schiller2023fuzzerrestarts.pdf)*. Here you can find the codebase for our scheduler `Sileo`, as well as the submodules for Fuzzbench and a patched version of AFL++. We tested Sileo with AFL++ 4.04c and 4.06c. The reports for our experiments can be found in [fuzzbench_reports](fuzzbench_reports)
 
 **Note: If you want to reproduce the results from our paper, please have a look at our [Sileo-Fuzzbench](https://github.com/CISPA-SysSec/fuzzing-restarts-fuzzbench) repository.**
 
