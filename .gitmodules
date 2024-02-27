@@ -1,0 +1,6 @@
+[submodule "fuzzing-restarts-fuzzbench"]
+	path = fuzzing-restarts-fuzzbench
+	url = git@github.com:CISPA-SysSec/fuzzing-restarts-fuzzbench.git
+[submodule "fuzzing-restarts-aflplusplus"]
+	path = fuzzing-restarts-aflplusplus
+	url = git@github.com:CISPA-SysSec/fuzzing-restarts-aflplusplus.git
