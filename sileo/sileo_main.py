@@ -572,7 +572,7 @@ def gen_afl_args(args : Namespace) -> Dict[str, Any]:
     else:
         target_args = args.afl_target_args
 
-    return {"afl_bin": afl_bin, "afl_path": afl_path, "afl_seed": afl_seed, "afl_default_seed": afl_seed, "afl_out": afl_out, "afl_dict": afl_dict, "afl_cmplog": afl_cmplog, "target_name": target_name, "afl_target": afl_target, "afl_target_args": target_args, "add_flags": add_flags}
+    return {"afl_bin": afl_bin.as_posix(), "afl_path": afl_path.as_posix(), "afl_seed": afl_seed, "afl_default_seed": afl_seed, "afl_out": afl_out, "afl_dict": afl_dict, "afl_cmplog": afl_cmplog, "target_name": target_name, "afl_target": afl_target, "afl_target_args": target_args, "add_flags": add_flags}
 
 def create_directory_tree(afl_out : Path, target_name : str, mode: str) -> Path:
     """ initialize directory structure """
@@ -601,8 +601,8 @@ def parse_arguments(raw_args: Optional[Sequence[str]]) -> Namespace:
     parser: ArgumentParser = ArgumentParser(description="Scheduler for AFL++ restarting instances")
     group = parser.add_mutually_exclusive_group()
 
-    parser.add_argument("--afl_path", type=str, default=None, help="Path to AFL binaries")
-    parser.add_argument("--afl_bin", type=str, default="afl-fuzz", help="Path to afl-fuzz binary")
+    parser.add_argument("--afl_path", type=Path, default=None, help="Path to AFL binaries")
+    parser.add_argument("--afl_bin", type=Path, default="afl-fuzz", help="Path to afl-fuzz binary")
     parser.add_argument("--afl_seed", "-s", type=Path, help="Path to seed directory")
     parser.add_argument("--afl_out", "-o", type=Path, help="Path to output directory")
     parser.add_argument("--afl_dict", type=str, default=None, help="fuzzer dictionary for afl-fuzz")
