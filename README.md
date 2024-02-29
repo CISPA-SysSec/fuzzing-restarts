@@ -9,7 +9,7 @@ This repository is part of our paper *[Novelty Not Found: Adaptive Fuzzer Restar
 1. Clone this repository:
 
     ```bash
-   git clone https://github.com/CISPA-SysSec/fuzzing-restarts
+   git clone https://github.com/CISPA-SysSec/fuzzing-restarts.git
     ```
 
 2. Install requirements:
@@ -21,7 +21,7 @@ This repository is part of our paper *[Novelty Not Found: Adaptive Fuzzer Restar
 3. Clone [AFL++](https://github.com/AFLplusplus/AFLplusplus):
 
    ```bash
-   git clone https://github.com/AFLplusplus/AFLplusplus && cd AFLplusplus && git checkout tags/4.04c
+   git clone https://github.com/AFLplusplus/AFLplusplus.git && cd AFLplusplus && git checkout tags/4.04c
    ```
 
 4. Install AFL++ dependencies (for more information about the installation see [AFL++ Install](https://github.com/AFLplusplus/AFLplusplus/blob/stable/docs/INSTALL.md)):
